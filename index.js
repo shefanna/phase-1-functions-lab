@@ -17,12 +17,12 @@ function distanceFromHqInBlocks (number1) {
     }
   }
   function calculatesFarePrice (start, destination) {
-    const distance = distanceTravelledInFeet(start, destination);
-    if (distance <= 400) {
+    const distanceTravelled = distanceTravelledInFeet(start, destination);
+    if (distanceTravelled <= 400) {
       return 0;
-    } else if (distance > 400 && distance <= 2000) {
-      return .02 * (distance - 400);
-    } else if (distance > 2000 && distance < 2500) {
+    } else if (distanceTravelled > 400 && distanceTravelled <= 2000) {
+      return .02 * (distanceTravelled - 400);
+    } else if (distanceTravelled > 2000 && distanceTravelled < 2500) {
       return 25;
     } else {
       return 'cannot travel that far';
